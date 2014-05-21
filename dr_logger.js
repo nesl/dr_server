@@ -44,8 +44,9 @@ function logPost( post ){
 	var time = post.time;
 	var val1 = post.val1;
 	var val2 = post.val2;
+	var user = post.user;
 
-	var data = time + "," + type + "," + val1 + "," + val2 + "\n";
+	var data = user + "," + time + "," + type + "," + val1 + "," + val2 + "\n";
 	console.log(data);
 	fs.appendFile(logdir + fname, data, function(err) {
 		if(err){
